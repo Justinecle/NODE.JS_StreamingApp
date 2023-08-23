@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container
+    h1 Search Results
+    p
+    .row
+      each result in results
+        .col-md-4
+          .card.mb-4
+            .card-body
+              h5.card-title= result.videoTitle
+              p.card-text= result.videoDescription
+              video(width="320" height="200" controls poster=result.videoThumbnail)
+                source(src=`/videos/stream/${encodeURIComponent(result.video)}`, type="video/mp4")

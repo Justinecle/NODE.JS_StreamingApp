@@ -1,0 +1,16 @@
+nav(class="navbar navbar-expand-lg navbar-white bg-black fixed-top")
+  div(class="container-fluid d-flex align-items-center")
+    a(class="navbar-brand" href="/")
+      img(src="/images/logo.jpg" width="30" height="30" alt="Streamin App logo" class="logo")
+    ul(class="navbar-nav")
+      li(class="nav-item")
+        a(class="nav-link" href="/") Stream
+      li(class="nav-item")
+        a(class="nav-link" href="/video/new") Upload
+      li(class="nav-item")
+        a(class="nav-link" href="/login") Login
+    form(class="search-form ms-auto" action="/search" method="get")
+      div(class="input-group")
+        input(type="text" class="form-control" name="query" placeholder="Search" aria-label="Search" aria-describedby="button-addon2")
+        button(class="btn search-button" type="submit" id="button-addon2")
+          i(class="fa fa-search")

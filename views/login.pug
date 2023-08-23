@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+  div(class="d-flex flex-row content mx-auto mt-5")
+    div(class="profile-container")
+
+    div(class="flex-fill d-flex flex-column")
+      form(class="card mx-auto mb-5 custom-form material-form" method="post" action="/login")
+        div(class="card-header") User Login
+        div(class="card-body")
+          div(class="mb-3")
+            label(for="username") Username
+            input(type="text" class="form-control" name="username" required)
+          div(class="mb-3")
+            label(for="password") Password
+            input(type="password" class="form-control" name="password" required)
+          if errors
+            ul(class="my-2")
+              each error in errors
+                li(class="text-danger")= error
+          div(class="w-100")
+            input(type="submit" value="Login" class="btn btn-primary ms-auto d-block")

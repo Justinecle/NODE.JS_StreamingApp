@@ -1,0 +1,103 @@
+body {
+  background-color: #cc3300;
+  color: black;
+  font-variant: small-caps;
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+
+/* Style pour le footer */
+.footer {
+  font-size: 10px;
+  padding-top: 10px;
+}
+
+/* Style pour la barre de navigation */
+.navbar a.nav-link {
+    color: white;
+    margin-right: 15px;
+}
+
+/* Style pour les liens de navigation au survol */
+.navbar a.nav-link:hover {
+    background-color: #cc3300;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style pour le bouton search */
+.search-button {
+  background-color: white;
+  color:black;
+}
+
+/* Style pour le bouton search au survol */
+.search-button:hover {
+  background-color:#cc3300;
+  color: white;
+}
+
+/* Style pour le logo */
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+/* Style pour les formulaires */
+.material-form {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.material-form label {
+  font-weight: bold;
+}
+
+.material-form input.form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.material-form input[type="submit"] {
+  background-color: #cc3300;
+  border: none;
+  color: white;
+}
+
+.material-form input[type="submit"]:hover {
+  background-color: #a30500;
+}
+
+/* Style pour les liens du footer */
+.footer-link {
+  color:#cc3300;
+}
+
+.footer-link:hover {
+  color: #a30500; 
+}
+
+/* Style page stream */
+.btn-custom {
+  background-color: #cc3300;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #a30500;
+  color: white;
+}
+
+.card-text.category {
+  color: dimgray; 
+  font-weight: bold;
+}
+
+.card-text.category { 
+  font-style: italic;
+}

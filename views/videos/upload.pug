@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+  div(class="d-flex flex-row content mx-auto mt-5")
+    div(class="profile-container")
+
+    div(class="flex-fill d-flex flex-column")
+      form(class="card mx-auto mb-5 custom-form material-form" method="post" action="/videos/upload", enctype="multipart/form-data")
+        div(class="card-header") Use this form to upload a new video
+        div(class="card-body")
+          div(class="mb-3")
+            label(for="videoTitle") Title
+            input(type="text" class="form-control" name="videoTitle" required)
+          div(class="mb-3")
+            label(for="videoDescription") Description
+            textarea(class="form-control" name="videoDescription" required)
+          div(class="mb-3")
+            label(for="videoCategory") Category
+            input(type="text" class="form-control" name="videoCategory" required)
+          div(class="mb-3")
+            label(for="video") Select the video (MP4 format)
+            input(type="file" class="form-control" name="video" accept=".mp4" required)
+          if errors
+            ul(class="my2")
+              each error in errors
+                li(class="text-danger")= error
+          div(class="w-100")
+            input(type="submit" value="Upload" class="btn btn-primary ms-auto d-block")

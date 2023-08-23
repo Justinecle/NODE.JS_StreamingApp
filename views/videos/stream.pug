@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      each video in videos
+        .col-md-4
+          .card.mb-4
+            .card-body.d-flex.flex-column.align-items-center.justify-content-center
+              video(width="320" height="200" controls poster=video.videoThumbnail)
+                source(src=`/videos/stream/${encodeURIComponent(video.video)}`, type="video/mp4")
+              p
+              h5.card-title= video.videoTitle
+              p.card-text.description= video.videoDescription
+              p.card-text.category= video.videoCategory
+              a.btn.btn-custom(href=`/videos/stream/${encodeURIComponent(video.video)}`) Watch the video
