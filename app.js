@@ -17,7 +17,7 @@ require('./database');
 const app = express();
 
 // Configuration pour servir les fichiers statiques (CSS, images, etc.)
-app.use(express.static('public')); // Le chemin 'public' correspond au dossier contenant vos fichiers statiques
+app.use(express.static('public'));
 
 // Définition du numéro de port sur lequel l'application va écouter
 const port = process.env.PORT || 3000;
@@ -40,19 +40,6 @@ app.use(express.urlencoded({ extended: true })) // Le middleware pour analyser l
 
 // Utilisation du routeur videoRoute pour gérer les routes liées aux vidéos
 app.use('/videos', videoRoute);
-
-/*
-// Route pour afficher toutes les vidéos avec des liens vers le streaming
-app.get('/videos/', async (req, res) => {
-    try {
-        const videos = await Video.find().exec();
-        res.render('videos/stream', { videos }); // Rendre le modèle 'stream.pug' avec les données des vidéos
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Erreur du serveur ou problème avec la base de données.');
-    }
-});
-*/
 
 // Utilise les routes définies dans le fichier './routes.js'
 app.use(index);
