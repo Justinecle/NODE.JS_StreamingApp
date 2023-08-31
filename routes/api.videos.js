@@ -13,7 +13,7 @@ router.post('/upload', upload.single('video'), async (req, res) => {
 
         // Vérification si toutes les informations requises sont présentes
         if (!videoTitle || !videoDescription || !videoCategory || !videoPath) {
-            res.status(400).render('error', { errorMessage: 'Missing or wrong video information.' });
+            res.status(400).render('message', { errorMessage: 'Missing or wrong video information.' });
             return;
         }
 
@@ -27,25 +27,25 @@ router.post('/upload', upload.single('video'), async (req, res) => {
 
         // Affiche le message de réussite du "upload"
         await newVideo.save();
-        res.status(200).render('error', { errorMessage: 'Video uploaded successfully.' });
+        res.status(200).render('message', { errorMessage: 'Video uploaded successfully.' });
     
     } catch (error) {
         // Affiche le message d'erreur em lien avec la bdd
         console.error(error);
-        res.status(500).render('error', { errorMessage: 'Server error or database problem.' });
+        res.status(500).render('message', { errorMessage: 'Server error or database problem.' });
     }
 });
 
 // Route pour afficher toutes les vidéos avec des liens vers le streaming
 router.get('/', async (req, res) => {
     try {
-        // Renvoi la vue 'upload.pug'
+        // Renvoi la vue 'stream.pug'
         const videos = await Video.find().exec();
         res.render('videos/stream', { videos }); 
     } catch (error) {
-        // Affiche le message d'erreur em lien avec la bdd
+        // Affiche le message d'erreur en lien avec la bdd
         console.error(error);
-        res.status(500).render('error', { errorMessage: 'Server error or database problem.' });
+        res.status(500).render('message', { errorMessage: 'Server error or database problem.' });
     }
 });
 
@@ -58,7 +58,7 @@ router.get('/stream/:filename', async (req, res) => {
         
         // Trouve la vidéo dans la bdd par le nom du fichier
         if (!video) {
-            res.status(404).render('error', { errorMessage: 'Video not found.' });
+            res.status(404).render('message', { errorMessage: 'Video not found.' });
             return;
         }
         
@@ -109,7 +109,7 @@ router.get('/stream/:filename', async (req, res) => {
     } catch (error) {
         // Gère les erreurs et affiche la page d'erreur
         console.error(error);
-        res.status(500).render('error', { errorMessage: 'Server error or problem with video file playback.' });
+        res.status(500).render('message', { errorMessage: 'Server error or problem with video file playback.' });
     }
 });
 

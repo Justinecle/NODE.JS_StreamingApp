@@ -23,7 +23,7 @@ router.get('/search', async (req, res) => {
       res.render('searchResults', { results: searchResults, query });
     } catch (error) {
       console.error(error);
-      res.status(500).render('error', { errorMessage: 'An error occurred during search.' });
+      res.status(500).render('message', { errorMessage: 'An error occurred during search.' });
     }
 });
 
@@ -43,7 +43,7 @@ router.get('/login', (req, res) => {
   });
 
 //Route pour afficher le formulaire permettant de créer de nouvelles vidéos
-router.get('/video/new', (req, res) => {
+router.get('/video/upload', (req, res) => {
     res.render('videos/upload'); // Rend le template `videos/upload.pug'
 });
 
@@ -53,7 +53,7 @@ router.get('/', async (req, res) => {
         // Tente de recuperer toutes les vidéos de la base de donnees
         const videos = await Video.find({}).exec();
         if (videos.length === 0) {
-            res.status(404).render('error', { errorMessage: 'There is no videos to display' });
+            res.status(404).render('message', { errorMessage: 'There are no videos to display' });
            } else {
             // Si la recuperation est reussie, rend la page de liste des vidéos avec les vidéos recuperées
             res.render('videos/stream', { videos }); }
@@ -61,7 +61,7 @@ router.get('/', async (req, res) => {
     } catch (err) {
         // Si une erreur se produit pendant la recuperation des vidéos, log l'erreur et envoie un message d'erreur 500 au client
         console.error(err);
-        res.status(500).render('error', { errorMessage: 'Server error or problem with video file playback.' });
+        res.status(500).render('message', { errorMessage: 'Server error or problem with video file playback.' });
         }
 }); 
   
