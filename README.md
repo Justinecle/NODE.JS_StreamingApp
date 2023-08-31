@@ -1,46 +1,54 @@
-# Travail Pratique 2
+<h1>Streaming App</h1>
 
-Ce projet est une application web qui permet de gérer et de diffuser des vidéos en ligne. Les utilisateurs peuvent télécharger des vidéos, les visualiser en streaming ainsi que faire des recherches de vidéos.
+ ### [Google Drive Execution](https://drive.google.com/file/d/1FrWSCsXmQFsZLlUfvZKbobLt2872Vecf/view)
 
-# Configuration
+<h2>Description</h2>
+This project is a web application that allows managing and streaming videos online. Users can upload videos, view them through streaming, and search for videos.
+<br />
 
-- Node.js installé
-- MongoDB installé et  en cours d'exécution (Database name: streaming, collection name: videos)
 
-# Installation
+<h2>Languages and Utilities Used</h2>
 
-Si vous n'avez pas déjà installé les dépendances ci-dessous, veuillez le faire :
+- <b>Javascript</b>
+- <b>Node.JS<b>
+- <b>Express<b>
+- <b>MongoDB<b>
+- <b>Mongoose<b>
+- <b>Morgan<b>
+- <b>Multer<b>
+- <b>Nodemon<b>
+- <b>Pug<b>
+- <b>Boostrap<b>
 
-    bootstrap : npm install bootstrap
-    express : npm install express
-    mongodb : npm install mongodb
-    mongoose : npm install mongoose
-    morgan : npm install morgan
-    multer : npm install multer
-    nodemon : npm install nodemon --save-dev
-    pug : npm install pug
 
-# Utilisation
+<h2>Environments Used </h2>
 
-1. Tapez npm run start pour démarrer l'application.
-2. Assurez-vous que le message "Connected to MongoDB" s'affiche dans le terminal avant de procéder. 
-2. Ouvrez votre navigateur et allez à l'URL http://localhost:3000 pour accéder à l'application.
-3. Pour télécharger une vidéo, cliquez sur "Upload" dans la barre de navigation, ce qui vous redirigera vers localhost:3000/video/upload. Vous pouvez ensuite ajouter les détails de la vidéo et la télécharger. Le message "Video uploaded successfully" s'affichera si le téléchargement est réalisé avec succès.
-4. Pour visionner la vidéo, cliquez sur "Stream" dans la barre de navigation. En cliquant sur "Watch the video", vous serez redirigé vers localhost:3000/videos/stream/:filename où la lecture de la vidéo sera possible.
-5. Pour rechercher une vidéo, cliquez sur le champ "Search" dans la barre de navigation. Vous pourrez alors effectuer une recherche parmi les vidéos téléchargées.
+- <b>Windows 10</b> (21H2)
+- <b>VS Code</b> (21H2)
 
-# Base de données
+<h2>Program walk-through:</h2>
 
-- L'application utilise MongoDB comme base de données.
-- Les vidéos sont stockées avec des données telles que le titre, la description et la catégorie.
-
-# Auteurs
-
-Ce projet a été développé par:
-
- - Daniel Sevigny
- - Justine Clément
- - René Barber
-
-Dernière modification le 25 août 2023
-Cégep Gérald Godin - 420-106-GG PROGRAMMATION WEB CLIENT
+<p align="center">
+Launch the program: <br/>
+<img src="https://i.imgur.com/0alrtHd.png" height="80%" width="80%" alt="npm run start"/>
+<br />
+<br />
+Upload a video:  <br/>
+<img src="https://i.imgur.com/4PC99o3.png" height="80%" width="80%" alt="upload"/>
+<br />
+<br />
+Stream a video: <br/>
+<img src="https://i.imgur.com/p0w8GGE.png" height="80%" width="80%" alt="stream"/>
+<br />
+<br />
+Search a video:  <br/>
+<img src="https://i.imgur.com/qUKAfWK.png" height="80%" width="80%" alt="search"/>
+<br />
+<br />
+Login:  <br/>
+<img src="https://i.imgur.com/seOZwBb.png" height="80%" width="80%" alt="login"/>
+<br />
+<br />
+About:  <br/>
+<img src="https://i.imgur.com/QJJyRF7.png" height="80%" width="80%" alt="about"/>
+</p>
