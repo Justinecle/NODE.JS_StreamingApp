@@ -23,7 +23,7 @@ This project is a web application that allows managing and streaming videos onli
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 11</b> (21H2)
 - <b>VS Code</b> (21H2)
 
 <h2>Program walk-through:</h2>
